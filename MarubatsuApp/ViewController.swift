@@ -13,21 +13,23 @@ class ViewController: UIViewController {
     // 表示中の問題番号を格納
     var currentQuestionNum: Int = 0
 
+   
     // 問題
-    let questions: [[String: Any]] = [
-        [
-            "question": "iPhoneアプリを開発する統合環境はZcodeである",
-            "answer": false
-        ],
-        [
-            "question": "Xcode画面の右側にはユーティリティーズがある",
-            "answer": true
-        ],
-        [
-            "question": "UILabelは文字列を表示する際に利用する",
-            "answer": true
-        ]
+    var questions: [[String: Any]] = [
+//        [
+//            "question": "iPhoneアプリを開発する統合環境はZcodeである",
+//            "answer": false
+//        ],
+//        [
+//            "question": "Xcode画面の右側にはユーティリティーズがある",
+//            "answer": true
+//        ],
+//        [
+//            "question": "UILabelは文字列を表示する際に利用する",
+//            "answer": true
+//        ]
     ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +46,19 @@ class ViewController: UIViewController {
         checkAnswer(yourAnswer: true)
     }
     
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
+    
     func showQuestion() {
-        let question = questions[currentQuestionNum]
         
-        if let que = question["question"] as? String {
-            questionLabel.text = que
+        if questions.isEmpty == true {
+            questionLabel.text = "問題がありません、問題を作りましょう!!"
+        } else {
+            let question = questions[currentQuestionNum]
             
+            if let que = question["question"] as? String {
+                questionLabel.text = que
+            }
         }
     }
     
@@ -89,6 +98,16 @@ class ViewController: UIViewController {
         let close = UIAlertAction(title: "閉じる", style: .cancel, handler: nil)
         alert.addAction(close)
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        questions = []
+        let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: "questions") != nil {
+            questions = userDefaults.object(forKey: "questions") as! [[String: Any]]
+        }
+        showQuestion()
     }
     
     }

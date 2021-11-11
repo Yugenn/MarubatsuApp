@@ -13,6 +13,7 @@
 		4536C7EC2735FA9C00B17D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4536C7EA2735FA9C00B17D50 /* Main.storyboard */; };
 		4536C7EE2735FA9E00B17D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4536C7ED2735FA9E00B17D50 /* Assets.xcassets */; };
 		4536C7F12735FA9E00B17D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4536C7EF2735FA9E00B17D50 /* LaunchScreen.storyboard */; };
+		454EC0EA273909F4008C7C3D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454EC0E9273909F4008C7C3D /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4536C7ED2735FA9E00B17D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4536C7F02735FA9E00B17D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4536C7F22735FA9E00B17D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		454EC0E9273909F4008C7C3D /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4536C7E62735FA9C00B17D50 /* SceneDelegate.swift */,
 				4536C7E82735FA9C00B17D50 /* ViewController.swift */,
 				4536C7EA2735FA9C00B17D50 /* Main.storyboard */,
+				454EC0E9273909F4008C7C3D /* CreateViewController.swift */,
 				4536C7ED2735FA9E00B17D50 /* Assets.xcassets */,
 				4536C7EF2735FA9E00B17D50 /* LaunchScreen.storyboard */,
 				4536C7F22735FA9E00B17D50 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454EC0EA273909F4008C7C3D /* CreateViewController.swift in Sources */,
 				4536C7E92735FA9C00B17D50 /* ViewController.swift in Sources */,
 				4536C7E52735FA9C00B17D50 /* AppDelegate.swift in Sources */,
 				4536C7E72735FA9C00B17D50 /* SceneDelegate.swift in Sources */,
